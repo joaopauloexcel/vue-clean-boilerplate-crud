@@ -42,8 +42,6 @@ src/
 
 * Facilidade de manutenção
 * Alto nível de testabilidade
-* Troca de framework sem impacto no domínio
-* Reutilização entre projetos e MFEs
 
 ---
 
