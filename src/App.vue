@@ -13,7 +13,6 @@ const showLayout = computed(() => !route.meta.public)
   <v-app>
     <v-layout>
       <Menu v-if="showLayout" />
-
       <v-main style="background-color: #f5f5f5;">
         <Header 
           v-if="showLayout" 
