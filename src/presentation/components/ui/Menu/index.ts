@@ -1,1 +1,1 @@
-export { default } from './Menu.vue'
+export { default } from './MenuComponent.vue'

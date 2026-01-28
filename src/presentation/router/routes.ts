@@ -1,6 +1,6 @@
 import type { RouteRecordRaw } from 'vue-router'
 
-import { ProductList, NotFound, Login, ProductDetails, Dashboard, ProductCreate } from '../pages'
+import { AppProductList, AppNotFound, AppLogin, AppProductDetails, AppDashboard, AppProductCreate } from '../pages'
 
 export const routes: RouteRecordRaw[] = [
     {
@@ -13,7 +13,7 @@ export const routes: RouteRecordRaw[] = [
     {
         path: '/dashboard',
         name: 'Dashboard',
-        component: Dashboard,
+        component: AppDashboard,
         meta: {
             public: false,
         },
@@ -21,7 +21,7 @@ export const routes: RouteRecordRaw[] = [
     {
         path: '/login',
         name: 'login',
-        component: Login,
+        component: AppLogin,
         meta: {
             public: true,
         },
@@ -29,7 +29,7 @@ export const routes: RouteRecordRaw[] = [
     {
         path: '/products',
         name: 'products',
-        component: ProductList,
+        component: AppProductList,
         meta: {
             public: false,
         },
@@ -37,7 +37,7 @@ export const routes: RouteRecordRaw[] = [
     {
         path: '/products/:id',
         name: 'ProductDetails',
-        component: ProductDetails,
+        component: AppProductDetails,
         meta: {
             public: false,
         },
@@ -45,7 +45,7 @@ export const routes: RouteRecordRaw[] = [
     {
         path: '/products/new',
         name: 'ProductCreate',
-        component: ProductCreate,
+        component: AppProductCreate,
         meta: {
             public: false,
         },
@@ -53,7 +53,7 @@ export const routes: RouteRecordRaw[] = [
     {
         path: '/:pathMatch(.*)*',
         name: 'NotFound',
-        component: NotFound,
+        component: AppNotFound,
         meta: {
             public: false,
         },

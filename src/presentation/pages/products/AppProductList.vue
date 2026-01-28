@@ -53,27 +53,35 @@ watch(params, () => {
     <v-progress-linear
       v-if="isFetching"
       indeterminate
-       color="#2e2e2e"
+      color="#2e2e2e"
       class="mb-4"
     />
 
-    <v-row justify="space-between" class="mb-4" style="flex: 1;">
+    <v-row
+      justify="space-between"
+      class="mb-4"
+      style="flex: 1;"
+    >
       <div />
-      <v-btn  color="#2e2e2e" @click="router.push('/products/new')">
+      <v-btn
+        color="#2e2e2e"
+        @click="router.push('/products/new')"
+      >
         Novo Produto
       </v-btn>
     </v-row>
 
     <v-data-table-server
+      v-model:page="page"
       :headers="headers"
       :items="data?.products || []"
       :items-length="data?.total || 0"
       :loading="isLoading"
       :items-per-page="itemsPerPage"
-      v-model:page="page"
       class="elevation-1"
       style="width: 100%;"
     >
+      <!-- eslint-disable-next-line vue/valid-v-slot -->
       <template #item.actions="{ item }">
         <v-container class="d-flex">
           <v-btn

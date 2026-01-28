@@ -1,1 +1,1 @@
-export { default as NotFound } from './NotFound.vue'
+export { default as AppNotFound } from './AppNotFound.vue'

@@ -1,32 +1,25 @@
-import {
-  mdiViewDashboard,
-  mdiPointOfSale,
-  mdiPackageVariant,
-  mdiAccountGroup
-} from '@mdi/js'
-
 import type { MenuItem } from './menu.types'
 
 export const menuItems: MenuItem[] = [
   {
     label: 'Dashboard',
     to: '/dashboard',
-    icon: ['mdi-svg', mdiViewDashboard]
+    icon: 'mdi-view-dashboard'
   },
   {
     label: 'Ponto de Venda',
     to: '/pvd',
-    icon: ['mdi-svg', mdiPointOfSale]
+    icon: 'mdi-point-of-sale'
   },
   {
     label: 'Produtos',
     to: '/products',
-    icon: ['mdi-svg', mdiPackageVariant]
+    icon: 'mdi-package-variant'
   },
   {
     label: 'Clientes',
     to: '/clients',
-    icon: ['mdi-svg', mdiAccountGroup]
+    icon: 'mdi-account-group'
   },
   {
     label: 'Ajuda',

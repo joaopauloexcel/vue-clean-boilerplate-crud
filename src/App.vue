@@ -15,8 +15,11 @@ const showLayout = computed(() => !route.meta.public)
       <Menu v-if="showLayout" />
 
       <v-main>
-        <Header v-if="showLayout" style="position: fixed;"/>
-        <router-view class="mt-2"/>
+        <Header 
+          v-if="showLayout" 
+          style="position: fixed;"
+        />
+        <router-view class="mt-2" />
         <VueQueryDevtools :initial-is-open="true" />
       </v-main>
     </v-layout>

@@ -1,1 +1,1 @@
-export { default as Dashboard } from './Dashboard.vue'
+export { default as AppDashboard } from './AppDashboard.vue'

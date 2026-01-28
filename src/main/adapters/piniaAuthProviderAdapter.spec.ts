@@ -24,6 +24,7 @@ describe('PiniaAuthProviderAdapter', () => {
       auth: authMock,
       resetState: resetStateMock,
       setAuth: vi.fn()
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } as any)
   })
 

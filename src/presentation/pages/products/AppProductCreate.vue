@@ -40,7 +40,9 @@ async function handleCreate(values: ProductsFormData) {
       color="#2e2e2e"
       class="mb-4"
     />
-     <h3 style="margin-left: 40px; margin-top: 16px; font-weight: normal;">Cadastrar Produto</h3>
+    <h3 style="margin-left: 40px; margin-top: 16px; font-weight: normal;">
+      Cadastrar Produto
+    </h3>
 
     <FormAddEdit :on-submit="handleCreate" />
   </div>

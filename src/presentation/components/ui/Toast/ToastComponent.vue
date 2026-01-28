@@ -21,7 +21,10 @@ const colors = {
     {{ toast.message }}
 
     <template #actions>
-      <v-btn variant="text" @click="toast.close">
+      <v-btn
+        variant="text"
+        @click="toast.close"
+      >
         Fechar
       </v-btn>
     </template>

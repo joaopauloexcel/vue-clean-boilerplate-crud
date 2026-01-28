@@ -28,7 +28,10 @@ async function handleLogout() {
     density="comfortable"
   >
     <div class="d-flex align-center ga-3 pl-8 pr-8">
-      <v-tooltip text="Voltar" v-if="showBack">
+      <v-tooltip
+        v-if="showBack"
+        text="Voltar"
+      >
         <template #activator="{ props }">
           <v-btn
             icon="mdi-arrow-left"
@@ -48,24 +51,35 @@ async function handleLogout() {
     <div class="d-flex align-center ga-2">
       <v-tooltip text="Ajuda">
         <template #activator="{ props }">
-          <v-btn icon="mdi-help-circle-outline" v-bind="props"/>
+          <v-btn
+            icon="mdi-help-circle-outline"
+            v-bind="props"
+          />
         </template>
       </v-tooltip>
 
-      <v-menu v-model="menuOpen" location="bottom end">
+      <v-menu
+        v-model="menuOpen"
+        location="bottom end"
+      >
         <template #activator="{ props }">
-        <v-btn
-          icon
-          size="small"
-          v-bind="props"
-          class="avatar-btn"
-        >
-          <v-avatar size="32">J</v-avatar>
-        </v-btn>
+          <v-btn
+            icon
+            size="small"
+            v-bind="props"
+            class="avatar-btn"
+          >
+            <v-avatar size="32">
+              J
+            </v-avatar>
+          </v-btn>
         </template>
 
         <v-list density="compact">
-          <v-list-item title="Sair" @click="handleLogout" />
+          <v-list-item
+            title="Sair"
+            @click="handleLogout"
+          />
         </v-list>
       </v-menu>
     </div>

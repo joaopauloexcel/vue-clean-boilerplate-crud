@@ -8,7 +8,10 @@ import { menuItems } from './menu.config'
     width="260"
     class="sidebar"
   >
-    <v-list nav dense>
+    <v-list
+      nav
+      dense
+    >
       <v-list-item
         v-for="item in menuItems"
         :key="item.label"
@@ -18,7 +21,10 @@ import { menuItems } from './menu.config'
         class="menu-item"
       >
         <template #prepend>
-          <v-icon :icon="item.icon" size="20" />
+          <v-icon
+            :icon="item.icon"
+            size="20"
+          />
         </template>
 
         <v-list-item-title>

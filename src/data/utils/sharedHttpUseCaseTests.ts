@@ -3,8 +3,6 @@ import { expect, it } from 'vitest'
 
 import { HttpStatusCode } from '@/data/protocols'
 import { HttpClientSpy, mockClientSpy } from '@/data/mocks'
-import { UnprocessableEntityError } from '@/domain/errors'
-import { DEFAULT_ERROR, MANY_ERRORS } from '@/data/utils'
 
 interface sharedTypes<Type1, Type2, Type3, Type4> {
   makeSut: (url?: string) => { sut: Type1; httpClientSpy: HttpClientSpy<Type2> }
@@ -23,6 +21,7 @@ export const sharedHttpUseCaseTests = <Type1, Type2, Type3, Type4>({
     const url = randUrl()
     const { sut, httpClientSpy } = makeSut(url)
     mockClientSpy(HttpStatusCode.ok, httpClientSpy)
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     await (sut as any)[methodName]()
 
     expect(httpClientSpy.url).toContain(`${url}`)
@@ -33,6 +32,7 @@ export const sharedHttpUseCaseTests = <Type1, Type2, Type3, Type4>({
     const { sut, httpClientSpy } = makeSut()
     mockClientSpy(HttpStatusCode.ok, httpClientSpy, httpResult as unknown)
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const response = httpRequestOrParams ? await (sut as any)[methodName](httpRequestOrParams) : await (sut as any)[methodName]()
 
     if (httpResult) {
@@ -46,6 +46,7 @@ export const sharedHttpUseCaseTests = <Type1, Type2, Type3, Type4>({
     const { sut, httpClientSpy } = makeSut()
     mockClientSpy(HttpStatusCode.ok, httpClientSpy, httpResult as unknown)
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const response = httpRequestOrParams ? await (sut as any)[methodName](httpRequestOrParams) : await (sut as any)[methodName]()
 
     if (httpResult) {
@@ -59,6 +60,7 @@ export const sharedHttpUseCaseTests = <Type1, Type2, Type3, Type4>({
     const { sut, httpClientSpy } = makeSut()
     mockClientSpy(HttpStatusCode.created, httpClientSpy, httpResult as unknown)
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const response = await (sut as any)[methodName](httpRequestOrParams)
     expect(response).toEqual(httpResult)
   })
@@ -67,6 +69,7 @@ export const sharedHttpUseCaseTests = <Type1, Type2, Type3, Type4>({
     const { sut, httpClientSpy } = makeSut()
     mockClientSpy(HttpStatusCode.noContent, httpClientSpy)
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const response = await (sut as any)[methodName](httpRequestOrParams)
     expect(response).toEqual({})
   })

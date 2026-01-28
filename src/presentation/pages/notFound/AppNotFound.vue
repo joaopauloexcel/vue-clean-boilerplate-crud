@@ -3,7 +3,9 @@
     <h1>404</h1>
     <p>Página não encontrada</p>
 
-    <RouterLink to="/products">Ir para produtos</RouterLink>
+    <RouterLink to="/products">
+      Ir para produtos
+    </RouterLink>
   </div>
 </template>
 

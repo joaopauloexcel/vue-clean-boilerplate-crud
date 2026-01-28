@@ -5,7 +5,7 @@ import { mockGetProductResponse } from '@/data/mocks'
 import { HttpStatusCode } from '@/data/protocols'
 import { uriPaths } from '@/main/factories/usecases/uriPaths.definitions'
 import { MswInterceptor, renderComposable } from '@/mocks'
-import { clearCacheProduct, useGetProduct } from './useGetProduct.hook'
+import { useGetProduct } from './useGetProduct.hook'
 
 const interceptor = new MswInterceptor()
 
@@ -62,7 +62,7 @@ describe(useGetProduct.name, () => {
   it('clearCacheProduct should invalidate queries', async () => {
     interceptor.intercept(url, 'get', mockGetProductResponse(), HttpStatusCode.ok)
 
-    const { result, queryClient } = makeSut()
+    const { result } = makeSut()
 
     await interceptor.wait('GET', url)
 

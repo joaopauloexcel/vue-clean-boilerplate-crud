@@ -23,11 +23,17 @@ const submit = handleSubmit(async (values) => {
 </script>
 
 <template>
-  <v-container class="fill-height d-flex align-center justify-left m-auto" style="max-width: none !important;">
-    <v-card width="420" class="pa-6">
+  <v-container
+    class="fill-height d-flex align-center justify-left m-auto"
+    style="max-width: none !important;"
+  >
+    <v-card
+      width="420"
+      class="pa-6"
+    >
       <v-form @submit.prevent="submit">
         <div>
-         <v-text-field
+          <v-text-field
             v-model="title"
             label="Nome"
             variant="outlined"
@@ -46,7 +52,7 @@ const submit = handleSubmit(async (values) => {
           />
         </div>
 
-       <div>
+        <div>
           <v-text-field
             v-model="price"
             label="Preço"

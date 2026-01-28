@@ -59,7 +59,9 @@ async function handleUpdate(values: ProductsFormData) {
       class="mb-4"
     />
 
-    <h3 style="margin-left: 40px; margin-top: 16px; font-weight: normal;">Editar Produto</h3>
+    <h3 style="margin-left: 40px; margin-top: 16px; font-weight: normal;">
+      Editar Produto
+    </h3>
 
     <FormAddEdit
       v-if="defaultValues"

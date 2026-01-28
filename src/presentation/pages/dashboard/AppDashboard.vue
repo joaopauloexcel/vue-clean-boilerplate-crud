@@ -3,7 +3,9 @@
     <h1>Olá</h1>
     <p>Esse é o dashboard</p>
 
-    <RouterLink to="/products">Atalho para produtos</RouterLink>
+    <RouterLink to="/products">
+      Atalho para produtos
+    </RouterLink>
   </div>
 </template>
 

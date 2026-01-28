@@ -1,3 +1,3 @@
-export { default as ProductList } from './ProductList.vue'
-export { default as ProductCreate } from './ProductCreate.vue'
-export { default as ProductDetails } from './ProductDetails.vue'
+export { default as AppProductList } from './AppProductList.vue'
+export { default as AppProductCreate } from './AppProductCreate.vue'
+export { default as AppProductDetails } from './AppProductDetails.vue'
