@@ -32,7 +32,6 @@ async function handleUpdate(values: ProductsFormData) {
     {
       id,
       body: {
-        id,
         title: values.title,
         description: values.description,
         price: Number(values.price),
@@ -43,7 +42,7 @@ async function handleUpdate(values: ProductsFormData) {
     {
       onSuccess: () => {
         toast.success('Produto ' + id + ' atualizado com sucesso!')
-        router.push('/produsts')
+        router.push('/products')
       }
     }
   )
