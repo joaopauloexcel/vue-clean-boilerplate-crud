@@ -18,7 +18,7 @@ export class GetProducts implements GetProductsUseCase {
 
       return treatmentStatusResponse<GetProductsModel>(httpResponse) as GetProductsModel
     } catch (error) {
-      throw console.log({ oi: error })
+      throw console.error(error)
     }
 
 

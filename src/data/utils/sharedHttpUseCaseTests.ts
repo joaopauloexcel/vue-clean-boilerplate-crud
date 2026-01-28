@@ -23,8 +23,6 @@ export const sharedHttpUseCaseTests = <Type1, Type2, Type3, Type4>({
     const url = randUrl()
     const { sut, httpClientSpy } = makeSut(url)
     mockClientSpy(HttpStatusCode.ok, httpClientSpy)
-    console.log('methodName', methodName)
-    console.log('sut', sut)
     await (sut as any)[methodName]()
 
     expect(httpClientSpy.url).toContain(`${url}`)

@@ -33,7 +33,6 @@ const handleLogin = async () => {
     )
     
     const token = data?.accessToken
-    console.log({data})
     authStore.setAuth(token)
     router.push('/')
   } catch (err: any) {

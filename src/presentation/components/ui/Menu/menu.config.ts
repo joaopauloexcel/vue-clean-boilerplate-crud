@@ -6,7 +6,7 @@ import {
 } from '@mdi/js'
 
 import type { MenuItem } from './menu.types'
-console.log({ mdiPointOfSale })
+
 export const menuItems: MenuItem[] = [
   {
     label: 'Dashboard',

@@ -10,7 +10,6 @@ const router = useRouter()
 const toast = useToastStore()
 
 const postProductMutation = usePostProduct()
-console.log({isPending: postProductMutation.isPending.value})
 
 async function handleCreate(values: ProductsFormData) {
   await postProductMutation.mutateAsync(
