@@ -1,3 +1,3 @@
 #!/bin/sh
 
-npm run test:coverage && npm run lint
+npm run pre:push
