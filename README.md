@@ -1,6 +1,6 @@
 # 🛒 Store Frontends — Vue.js E-commerce Template
 
-Um **template profissional de frontend para lojas online**, construído com **Vue 3 + Vite**, focado em **arquitetura escalável, reutilização entre MFEs e alta qualidade de código**.
+Um **template profissional de frontend para lojas online**, construído com **Vue 3 + Vite**, focado em **arquitetura escalável e alta qualidade de código**.
 
 Este projeto foi pensado para servir como **base de produto real**, podendo ser utilizado tanto em ambientes corporativos quanto em projetos SaaS ou white‑label.
 
@@ -42,8 +42,6 @@ src/
 
 * Facilidade de manutenção
 * Alto nível de testabilidade
-* Troca de framework sem impacto no domínio
-* Reutilização entre projetos e MFEs
 
 ---
 
@@ -148,7 +146,6 @@ npm run test:coverage # Cobertura de testes
 Este projeto serve como:
 
 * Template profissional de e‑commerce em Vue
-* Base para múltiplos MFEs
 * Boilerplate corporativo
 * Portfólio técnico avançado
 * Base sólida para produtos SaaS
